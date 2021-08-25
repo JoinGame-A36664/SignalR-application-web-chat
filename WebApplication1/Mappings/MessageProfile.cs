@@ -13,7 +13,7 @@ namespace WebApplication1.Mappings
     public class MessageProfile:Profile
     {
         public MessageProfile()
-        {
+        { // test
             CreateMap<Message, MessageViewModel>()
                 .ForMember(dst => dst.From, opt => opt.MapFrom(x => x.FromUser.FullName))
                 .ForMember(dst => dst.Room, opt => opt.MapFrom(x => x.ToRoom.Name))
