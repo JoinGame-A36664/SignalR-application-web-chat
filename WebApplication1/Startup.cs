@@ -80,7 +80,7 @@ namespace WebApplication1
                 });
             });
 
-            services.AddRazorPages(options =>
+            IMvcBuilder build = services.AddRazorPages(options =>
             {
                 options.Conventions.AddAreaFolderRouteModelConvention("Identity", "/Account/", model =>
                 {
@@ -93,6 +93,13 @@ namespace WebApplication1
                 });
             });
 
+#if DEBUG
+            var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            if (environment == Environments.Development)
+            {
+                build.AddRazorRuntimeCompilation();
+            }
+#endif
 
             services.AddControllersWithViews();
 
