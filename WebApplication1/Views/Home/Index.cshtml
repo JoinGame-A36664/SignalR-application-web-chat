@@ -171,13 +171,14 @@
                 </button>
             </div>
             <div class="modal-body">
-                <input type="text" class="form-control" id="newRoomName" 
+                <input type="text" class="form-control" id="newRoomName"
                        data-bind="value: $root.joinedRoom()">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" 
-                       >Update</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                    Update
+                </button>
             </div>
         </div>
     </div>
@@ -196,10 +197,13 @@
                 <p>Are you sure you want to delete this Chat Room?</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" 
-                        data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal" 
-                       >Delete</button>
+                <button type="button" class="btn btn-secondary"
+                        data-dismiss="modal">
+                    Close
+                </button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">
+                    Delete
+                </button>
             </div>
         </div>
     </div>
@@ -209,6 +213,10 @@
 @section Scripts{
 
 
+
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/lib/KnockoutJS/knockout-3.5.1.js"></script>
     <script src="~/js/site.js"></script>
+    <script src="~/js/chat.js"></script>
 
 }
