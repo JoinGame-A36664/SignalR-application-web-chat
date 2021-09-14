@@ -280,6 +280,15 @@ body {
         min-width: 220px;
         max-width: 500px;
     }
+
+
+        .chat-message .message-content img.post-image {
+            max-width: 100%;
+            max-height: 100%;
+            /*  object-fit:cover;*/
+        }
+
+
         .chat-message .message-content span {
             color: #777;
         }
@@ -377,3 +386,26 @@ input[type="radio"] {
         padding: 1px;
     }
 
+.ismine {
+    flex-direction: row-reverse;
+}
+
+    .ismine .message-content {
+        background: #8abde6;
+    }
+
+        .ismine .message-content .author,
+        .ismine .message-content .timestamp,
+        .ismine .message-content .timestamp span,
+        .ismine .message-content .content {
+            color: white;
+        }
+
+        .ismine .message-content div {
+            flex-direction: row-reverse;
+        }
+
+    .ismine .message-avatar {
+        margin-right: 0;
+        margin-left: 10px;
+    }
